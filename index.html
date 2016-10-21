@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="assessment">
+<html lang="en" ng-app="jakeExam">
 <head>
     <meta charset="UTF-8">
     <title>Front End Assessment</title>
     <link rel="stylesheet" href="./styles/app.css">
 </head>
-<body>
+<body ng-controller="mainCtrl">
 <!--This div wraps the entire page-->
     <div class="site-wrapper">
         <!--Here is your header with the navigation nested inside -->
@@ -17,14 +17,15 @@
                             <a ui-sref="shop">Shop</a>
                         </li>
                         <li>
-                            <a>Blog</a>
+                            <a ui-sref="blog">Blog</a>
                         </li>
                         <li>
-                            <a>About</a>
+                            <a ui-sref="about">About</a>
                         </li>
                     </ul>
 
-                </nav>
+                </nav><br>
+                <!-- {{test}} -->
                 <button class="hamburger toggle-nav js-toggle-nav" ng-click="showNav">
                     <span class="hamburger-box"><span class="hamburger-inner"></span>
                     </span>
@@ -35,7 +36,7 @@
         <!--This is the main wrapper -->
         <main class="site-main" role="main">
 
-
+<ui-view></ui-view>
 
         </main>
         </div>
@@ -44,5 +45,17 @@
 <!--ADD ALL YOUR SCRIPTS HERE -->
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.min.js"></script>
+<script src="app.js"></script>
+<script src="controllers/mainCtrl.js"></script>
+<script src="mainServ.js"></script>
+<script src="controllers/homeCtrl.js"></script>
+<script src="controllers/blogCtrl.js"></script>
+<script src="controllers/aboutCtrl.js"></script>
+<script src="controllers/shopCtrl.js"></script>
+<script src="directives/linkDir.js"></script>
+<script src="directives/linkDirCrtl.js"></script>
+<script src="controllers/prodetailCtrl.js"></script>
+
+
 </body>
 </html>
