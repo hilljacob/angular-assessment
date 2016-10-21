@@ -6,7 +6,7 @@ angular.module('jakeExam').directive('linkDir', function(){
     restrict: 'E',
     controller:'linkDirCtrl',
     scope:{
-      
+      pro: '='
     }
   }
 
